@@ -6,10 +6,13 @@
   "bin": {
     "build-stuff-meetup-jan-23": "./bin/run"
   },
-  "homepage": "https://github.com/Presentations/hello-world",
+  "homepage": "https://github.com/antetmc2/build-stuff-meetup-jan-23/",
   "license": "MIT",
   "main": "dist/index.js",
-  "repository": "Presentations/hello-world",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:antetmc2/build-stuff-meetup-jan-23.git"
+  },
   "files": [
     "/bin",
     "/dist",
@@ -26,12 +29,21 @@
     "@types/chai": "^4",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.18.11",
+    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@typescript-eslint/parser": "^5.49.0",
     "chai": "^4",
-    "eslint": "^7.32.0",
-    "eslint-config-oclif": "^4",
+    "eslint": "^8.32.0",
+    "eslint-config-oclif": "^4.0.0",
     "eslint-config-oclif-typescript": "^1.0.3",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-formatter-codeframe": "^7.32.1",
+    "eslint-plugin-mocha": "^10.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-unicorn": "^45.0.2",
     "mocha": "^9",
     "oclif": "^3",
+    "prettier": "^2.5.1",
     "shx": "^0.3.3",
     "ts-node": "^10.9.1",
     "tslib": "^2.4.1",
@@ -54,17 +66,18 @@
   },
   "scripts": {
     "build": "shx rm -rf dist && tsc -b",
-    "lint": "eslint . --ext .ts --config .eslintrc",
+    "lint": "eslint . --ext .ts -f codeframe",
+    "lint:fix": "npm run lint -- --fix",
     "postpack": "shx rm -f oclif.manifest.json",
-    "posttest": "yarn lint",
-    "prepack": "yarn build && oclif manifest && oclif readme",
+    "posttest": "npm run lint",
+    "prepack": "npm run build && oclif manifest && oclif readme",
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif readme && git add README.md"
   },
   "engines": {
     "node": ">=12.0.0"
   },
-  "bugs": "https://github.com/Presentations/hello-world/issues",
+  "bugs": "https://github.com/antetmc2/build-stuff-meetup-jan-23/issues",
   "keywords": [
     "oclif"
   ],

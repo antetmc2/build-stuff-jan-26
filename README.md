@@ -79,7 +79,7 @@ EXAMPLES
   hello friend from oclif! (./src/commands/hello/index.ts)
 ```
 
-_See code: [dist/commands/hello/index.ts](https://github.com/Presentations/hello-world/blob/v0.0.0/dist/commands/hello/index.ts)_
+_See code: [dist/commands/hello/index.ts](https://github.com/antetmc2/build-stuff-meetup-jan-23/blob/v0.0.0/dist/commands/hello/index.ts)_
 
 ## `build-stuff-meetup-jan-23 hello world`
 
