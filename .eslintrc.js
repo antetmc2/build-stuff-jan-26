@@ -13,5 +13,7 @@ module.exports = {
   },
   rules: {
     'prettier/prettier': ['warn'],
+    'node/no-extraneous-import': 'off',
+    'unicorn/no-array-callback-reference': 'off',
   }
 };

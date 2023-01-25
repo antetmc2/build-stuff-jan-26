@@ -1,17 +1,17 @@
 {
-  "name": "build-stuff-meetup-jan-23",
+  "name": "build-stuff-jan-26",
   "version": "0.0.0",
   "description": "oclif example Hello World CLI",
   "author": "Ante Tomic",
   "bin": {
-    "build-stuff-meetup-jan-23": "./bin/run"
+    "build-stuff-jan-26": "./bin/run"
   },
-  "homepage": "https://github.com/antetmc2/build-stuff-meetup-jan-23/",
+  "homepage": "https://github.com/antetmc2/build-stuff-jan-26/",
   "license": "MIT",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:antetmc2/build-stuff-meetup-jan-23.git"
+    "url": "git@github.com:antetmc2/build-stuff-jan-26.git"
   },
   "files": [
     "/bin",
@@ -20,15 +20,24 @@
     "/oclif.manifest.json"
   ],
   "dependencies": {
+    "@oclif/command": "^1.8.21",
     "@oclif/core": "^1.26.1",
     "@oclif/plugin-help": "^5",
-    "@oclif/plugin-plugins": "^2.2.2"
+    "@oclif/plugin-plugins": "^2.2.2",
+    "edit-json-file": "^1.7.0",
+    "lodash": "^4.17.21",
+    "semver": "^7.3.8",
+    "shelljs": "^0.8.5",
+    "shx": "^0.3.4"
   },
   "devDependencies": {
     "@oclif/test": "^2.3.3",
     "@types/chai": "^4",
+    "@types/edit-json-file": "^1.7.0",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.18.11",
+    "@types/semver": "^7.3.13",
+    "@types/shelljs": "^0.8.11",
     "@typescript-eslint/eslint-plugin": "^5.49.0",
     "@typescript-eslint/parser": "^5.49.0",
     "chai": "^4",
@@ -44,14 +53,13 @@
     "mocha": "^9",
     "oclif": "^3",
     "prettier": "^2.5.1",
-    "shx": "^0.3.3",
     "ts-node": "^10.9.1",
     "tslib": "^2.4.1",
-    "typescript": "^4.9.4"
+    "typescript": "4.6.2"
   },
   "oclif": {
-    "bin": "build-stuff-meetup-jan-23",
-    "dirname": "build-stuff-meetup-jan-23",
+    "bin": "build-stuff-jan-26",
+    "dirname": "build-stuff-jan-26",
     "commands": "./dist/commands",
     "plugins": [
       "@oclif/plugin-help",
@@ -75,9 +83,9 @@
     "version": "oclif readme && git add README.md"
   },
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=16.0.0"
   },
-  "bugs": "https://github.com/antetmc2/build-stuff-meetup-jan-23/issues",
+  "bugs": "https://github.com/antetmc2/build-stuff-jan-26/issues",
   "keywords": [
     "oclif"
   ],
