@@ -3,9 +3,7 @@ import { PackageJson } from '../../class/package-json';
 import { FilterResult } from '../../types';
 
 export default class MigrateReact18Filter extends AbstractFilter {
-  static examples = [
-    '$ build-stuff-jan-26 migrate-react-18:filter ~/test-projects/example-02/package.json',
-  ];
+  static examples = ['$ build-stuff-jan-26 migrate-react-18:filter ~/test-projects/example-02/package.json'];
   // For running locally: ./bin/run migrate-react-18:filter ./test-projects/example-02/package.json
 
   static flags = {
