@@ -1,3 +1,5 @@
+import { find } from 'shelljs';
+
 import AbstractNeedsMigration from '../../class/abstract-needs-migration';
 import AbstractMigration from '../../class/abstract-migration';
 import { PackageJson } from '../../class/package-json';
@@ -15,9 +17,8 @@ export default class UpgradeEslintNeedsMigration extends AbstractNeedsMigration 
   async check(): Promise<boolean> {
     const path = this.args.path;
     const packageJson = new PackageJson(`${path}/package.json`);
+    const hasLintCommands = packageJson.hasCommand('lint') && !packageJson.hasCommand('lint:fix');
 
-    // "lint" check + ".eslintrc" existing check
-
-    return !packageJson.hasCommand('lint:fix');
+    return hasLintCommands;
   }
 }
