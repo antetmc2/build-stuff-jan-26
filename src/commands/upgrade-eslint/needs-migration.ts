@@ -16,6 +16,8 @@ export default class UpgradeEslintNeedsMigration extends AbstractNeedsMigration 
     const path = this.args.path;
     const packageJson = new PackageJson(`${path}/package.json`);
 
+    // "lint" check + ".eslintrc" existing check
+
     return !packageJson.hasCommand('lint:fix');
   }
 }
