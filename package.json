@@ -54,7 +54,7 @@
     "oclif": "^3",
     "prettier": "^2.5.1",
     "ts-node": "^10.9.1",
-    "tslib": "^2.4.1",
+    "tslib": "^2.5.0",
     "typescript": "4.6.2"
   },
   "oclif": {
